@@ -2,7 +2,7 @@ package com.player.controller;
 
 import java.util.List;
 
-
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -29,7 +29,7 @@ public class SearchPlayerController {
 	}
 	
 	@GET
-	@Path("/{name%}")
+	@Path("/name/{name}")
 	//@Consumes(MediaType.APPLICATION_JSON)
 	public Response getPlayersByName( @PathParam("name")String name){
 		
@@ -44,7 +44,7 @@ public class SearchPlayerController {
 	
 	
 	@GET
-	@Path("/{teamName%}")
+	@Path("/teamName/{teamName}")
 	public Response getPlayersByTeamName(@PathParam("teamName")String teamName){
 		
 		try {
@@ -56,8 +56,9 @@ public class SearchPlayerController {
 	}
 	
 	@GET
-	@Path("/{age}")
-	public Response getPlayersByAgeRange(@PathParam("age")int upper,int lower){
+	@Path("/age?{age}&{age}")
+	
+	public Response getPlayersByAgeRange(@PathParam("age1")int upper,@PathParam("age2")int lower){
 		
 		try {
 			return Response.ok(playerService.getPlayersByAgeRange(upper,lower), MediaType.APPLICATION_JSON).build();

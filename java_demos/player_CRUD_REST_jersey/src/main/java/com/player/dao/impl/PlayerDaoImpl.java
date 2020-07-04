@@ -120,6 +120,8 @@ public class PlayerDaoImpl implements PlayerDao{
 		Criteria crit = session.createCriteria(Player.class);
 		crit.add(Restrictions.eq("teamName",teamName));
 		
+		
+		
 		List<Player> playerList = crit.list();
 		
 		transaction.commit();
@@ -139,7 +141,7 @@ public class PlayerDaoImpl implements PlayerDao{
 		Transaction transaction = session.beginTransaction();
 		
 		Criteria crit = session.createCriteria(Player.class);
-		crit.add(Restrictions.between("age",lower,upper));
+		crit.add(Restrictions.between("age", lower, upper));
 		
 		List<Player> playerList = crit.list();
 		

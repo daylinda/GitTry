@@ -60,7 +60,10 @@ public class PlayerServiceImpl implements PlayerService{
 	}
 
 	public List<Player> getPlayersByAgeRange(int upper, int lower) throws BusinessException {
-		if(upper<0||lower<0||lower>upper) {
+		System.out.println("upper"+upper);
+		System.out.println("lower"+lower);
+		
+		if(upper<0 || lower<0) {
 			throw new BusinessException("Please enter a valid age range ");
 		}		
 		
