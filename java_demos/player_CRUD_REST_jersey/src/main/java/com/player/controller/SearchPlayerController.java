@@ -56,9 +56,9 @@ public class SearchPlayerController {
 	}
 	
 	@GET
-	@Path("/age?{age}&{age}")
+	@Path("/age/{age1},{age}")
 	
-	public Response getPlayersByAgeRange(@PathParam("age1")int upper,@PathParam("age2")int lower){
+	public Response getPlayersByAgeRange(@PathParam("age1")int upper,@PathParam("age")int lower){
 		
 		try {
 			return Response.ok(playerService.getPlayersByAgeRange(upper,lower), MediaType.APPLICATION_JSON).build();
