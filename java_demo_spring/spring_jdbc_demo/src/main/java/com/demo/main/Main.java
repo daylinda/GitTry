@@ -22,6 +22,19 @@ public class Main {
 //		for(Player p:playerList) {
 //			System.out.println(p);
 //		}
+		
+//		List<Player> playerList = dao.getPlayersByTeamName("India");
+//		for(Player p : playerList) {
+//			System.out.println(p);
+//		}
+		
+		dao.removePlayerById(6);
+		
+		
+		
+		
+			
+		
 	}
 
 }

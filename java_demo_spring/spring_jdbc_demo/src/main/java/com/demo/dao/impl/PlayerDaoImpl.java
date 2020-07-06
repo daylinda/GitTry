@@ -1,6 +1,7 @@
 package com.demo.dao.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.sql.DataSource;
 import javax.xml.transform.Templates;
@@ -49,12 +50,17 @@ public class PlayerDaoImpl implements PlayerDao {
 
 	@Override
 	public List<Player> getPlayersByTeamName(String teamName) {
-		return null;
+		String sql="select id,name,age,gender,teamName from player where teamName=?";
+		List<Player> playerList = template.query(sql, new Object[] {teamName}, new PlayerMapper());
+		return playerList;
 	}
 
 	@Override
 	public void removePlayerById(int id) {
-		// TODO Auto-generated method stub
+		String sql="delete from player where id=?";
+		//Player player = template.queryForObject(sql, new Object[] {id}, new PlayerMapper());
+		template.update(sql, new Object[] {id});
+		System.out.println("Player with id "+id +" deleted");
 		
 	}
 
