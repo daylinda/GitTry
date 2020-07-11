@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tables css demo</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 100%;
+
+        }
+        th{
+            background-color: cadetblue;
+        }
+        table,th,td{
+            border: 1px solid black;
+        }
+        th,td{
+            text-align: center;
+            padding: 15px 15px 10px 10px;
+        }
+        tr:hover{
+            background-color: blueviolet;
+        }
+        tr:nth-child(odd){
+            background-color: mediumaquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div style="overflow: scroll;">
+
+    <table >
+        <caption style="text-align: center;width: 100%;">Demo table</caption>
+        <tr >
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th >Age</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>         
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+        <tr>
+            <td>Jack</td>
+            <td>Jackson</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>Jada</td>
+            <td>Smith</td>
+            <td>20</td>
+          </tr>
+        
+
+      </table>
+    </div>
+</body>
+</html>

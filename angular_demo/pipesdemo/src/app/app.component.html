@@ -1,0 +1,14 @@
+<div>
+  <h1>Demo pipes-> {{title}}</h1>
+  <h2>Date->{{mydate}}</h2>
+  <h2>Date Pipe->{{mydate|date:'d/MMMM/y E HH hh:mm:ss'}}</h2>
+  <h2>Json{{jsonData}}</h2>
+  <h2>Json{{jsonData|json}}</h2>
+  <h2>percent{{20|percent}}</h2>
+  <h2>Fruits {{fruits | slice:1:3}}</h2>
+
+  <h1>Custom Pipe Demo</h1>
+  <h3>Custom sqrt pipe{{125|sqrt}}</h3>
+  <h3>Custom fullname pipe {{firstname | fullname:lastname}}</h3>
+
+</div>

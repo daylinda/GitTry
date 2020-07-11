@@ -1,0 +1,39 @@
+Angular installation key commands
+
+latest version install
+npm install -g @angular/cli
+
+
+install specific version
+npm install -g @angular/cli@8.3.19
+
+to confirm the installation
+ng
+
+to create new app
+ng new (my-first-angular-app)
+
+to create new class
+ng g class
+
+
+
+if installation failure occurs go to physical location and shift delete folder
+
+cd (app name)
+
+to build
+ng serve/s --open
+
+
+
+<span>{{ title }} app is running!</span>
+
+
+to create component
+ng generate component (component name)
+
+ng g c <name>
+
+
+Mosh Hamidami - angular teaching

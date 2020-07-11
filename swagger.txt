@@ -1,0 +1,22 @@
+<dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+
+
+over PSVM 
+@EnableSwagger2
+
+in PSVM
+
+    @Bean
+       public Docket productApi() {
+          return new Docket(DocumentationType.SWAGGER_2).select()
+             .apis(RequestHandlerSelectors.basePackage("com.animal")).build();
+       }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu demo</title>
+    <style>
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            background-color: gray;
+            border: 5px solid steelblue;
+            height: 100%;
+            overflow: auto;
+            position: fixed;
+        }
+        li{
+            text-align: center;
+            font-size: 25px;
+            border-bottom: 2px solid darkgrey;
+        }
+        li a{
+            display: block;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: honeydew;
+            
+        }
+        li a:hover{
+            background-color: teal;
+        }
+        li a:active{
+            background-color: darkslategray;
+            color: dimgray;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#feed">Feed</a></li>
+        <li><a href="#search">Serach</a></li>
+        <li><a href="#contact">Contact us</a></li>
+        <li><a href="#about">About us</a></li>
+        
+    </ul>
+    <div style="margin-left: 25%;padding:25px 25px 25px;">
+        <p>
+            here here
+            I am here
+        </p>
+    </div>
+</body>
+</html>
